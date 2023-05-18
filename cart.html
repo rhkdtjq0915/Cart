@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <title>cart</title>
+  </head>
+  <body>
+    <div class="main__container">
+      <!-- header 영역 -->
+      <header>
+        <nav class="local-nav">
+          <div class="local-nav-links">
+            <a href="#">회원정보수정</a>
+            <a href="#">로그아웃</a>
+            <div class="count__con">
+              <a href="#"
+                ><i class="large material-icons">shopping_basket</i></a
+              >
+              <span class="count" id="cartCount">0</span
+              ><!-- 리스트의 갯수만큼 size -->
+            </div>
+            <a href="#"><i>search</i></a>
+          </div>
+          <!--end of local-nav-links-->
+        </nav>
+        <!--end of local-nav-->
+
+        <nav class="global-nav">
+          <div>
+            <ul class="global-nav-links">
+              <a href="#" class="product-name"><img src="images/logo.png" /></a>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product.html"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >PRODUCT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >CLASS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >MAP</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--end of global-nav-links-->
+        </nav>
+        <!--end of global-nav-->
+      </header>
+
+      <section
+        class="cart__con1 order cart"
+        id="contents"
+        style="min-width: 950px"
+      >
+        <div class="cart__con1__img">
+          <h2>장바구니</h2>
+        </div>
+        <div class="info">
+          <h4><b>수강생</b>님의 장바구니 목록입니다.</h4>
+        </div>
+
+        <div class="inner cartcon">
+          <!-- 일반장바구니// -->
+          <h3>장바구니 목록</h3>
+          <ul class="infotxt">
+            <li>
+              모나미 배송상품과 업체배송상품은 배송비가 별도로 부과되며,
+              산간도서지역은 추가 배송비가 발생됩니다.
+            </li>
+            <li>
+              장바구니에 담긴 상품은 최대 30일까지 보관되며 30일 경과 시 자동
+              삭제됩니다.
+            </li>
+          </ul>
+
+          <div class="form-area">
+            <form class="form-area-con">
+              <fieldset class="list-field">
+                <!-- 							<legend class="hide">장바구니</legend> -->
+
+                <table>
+                  <caption>
+                    장바구니 목록
+                  </caption>
+                  <colgroup>
+                    <col style="width: 150px" />
+                    <col />
+                    <col style="width: 150px" />
+                    <col style="width: 150px" />
+                    <col style="width: 150px" />
+                    <col style="width: 150px" />
+                  </colgroup>
+
+                  <thead>
+                    <tr>
+                      <th colspan="2">상품명</th>
+                      <th>상품금액</th>
+                      <th>수량</th>
+                      <th>주문금액</th>
+                      <th>주문</th>
+                    </tr>
+                  </thead>
+
+                  <!-- 장바구니 목록 -->
+                  <tbody id="cartContainer">
+                    <tr>
+                      <td>
+                        <figure>
+                          <img
+                            src="https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/goods/MG000021303/main/MG000021303_REP_THUMB_285X285_20220222101841.blob"
+                            alt=""
+                            class="loading"
+                          />
+                        </figure>
+                      </td>
+                      <td>
+                        <div class="info-area">엠에코 프러스펜 3000 세트</div>
+                      </td>
+                      <td><em>3500</em>원</td>
+                      <td>
+                        <div class="ea-area">
+                          <input
+                            id="cartItemAmount0"
+                            type="number"
+                            title="수량 입력"
+                            value="1"
+                            readonly
+                          />
+                          <button type="button" class="btn-down">
+                            수량 낮추기
+                          </button>
+                          <button type="button" class="btn-up">
+                            수량 올리기
+                          </button>
+                        </div>
+                        <button type="button" class="btn-whitegray small">
+                          변경
+                        </button>
+                      </td>
+                      <td><em class="cartAllPrice">3500</em>원</td>
+                      <td class="btn">
+                        <button type="button" class="btn-whitegray small">
+                          삭제
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </fieldset>
+
+              <fieldset class="price-field">
+                <dl class="orderprice">
+                  <dt>상품금액</dt>
+                  <dd><em id="orderPrice">0</em>원</dd>
+                </dl>
+                <dl class="shipping">
+                  <dt>배송비</dt>
+                  <dd><em id="shippingPrice">0</em>원</dd>
+                </dl>
+                <dl class="total">
+                  <dt>총 결제금액</dt>
+                  <dd><em id="totalPrice">0</em>원</dd>
+                </dl>
+              </fieldset>
+
+              <div class="btn-area">
+                <button type="button" class="btn-whitegray">
+                  상품주문
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- //일반장바구니 -->
+        </div>
+      </section>
+      <!-- footer 영역 -->
+      <footer>
+        <div class="foot">
+          <div class="foot_pop">
+            <div class="privacy">
+              <div class="title">개인정보 취급방침</div>
+              <div class="textarea">
+                <textarea readonly="readonly">
+                    '㈜모나미'는 (이하 '회사'는) 정보주체의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
+                  </textarea
+                >
+              </div>
+              <div class="btn_close">
+                <a>CLOSE</a>
+              </div>
+            </div>
+            <div class="email">
+              <div class="title">이메일무단수집거부</div>
+              <div class="textarea">
+                본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그
+                밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                이를 위반시정 보통신망법에 의해 형사 처벌됨을 유념하시기
+                바랍니다. <br />
+                <br />
+                <div class="tit">시행일</div>
+
+                본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
+              </div>
+              <div class="btn_close">
+                <a>CLOSE</a>
+              </div>
+            </div>
+          </div>
+          <div class="foot_top">
+            <h1>
+              <img src="images/logo_white.png" alt="푸터 모나미 로고" />
+            </h1>
+            <ul class="fm">
+              <li><a href="#">회사소개</a></li>
+              <li><a class="privacy_pop">개인정보처리방침</a></li>
+              <li><a class="email_pop">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const initCart = () => {
+
+      };
+
+      const initCartCount = () => {
+
+      };
+
+      const increaseCartItemAmount = (idx) => {
+
+      };
+
+      const decreaseCartItemAmount = (idx) => {
+
+      };
+
+      const changeAmount = (idx) => {
+
+      };
+
+      const deleteCartItem = (idx) => {
+
+      };
+
+      const order = () => {
+
+      };
+    </script>
+  </body>
+</html>

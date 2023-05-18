@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <title>Monami Product</title>
+  </head>
+  <body>
+    <div class="main__container">
+      <!-- header 영역 -->
+      <header>
+        <nav class="local-nav">
+          <div class="local-nav-links">
+            <a href="#">회원정보수정</a>
+            <a href="#">로그아웃</a>
+            <div class="count__con">
+              <a href="cart.html"
+                ><i class="large material-icons">shopping_basket</i></a
+              >
+              <span class="count" id="cartCount">0</span
+              ><!-- 리스트의 갯수만큼 size -->
+            </div>
+            <a href="#"><i>search</i></a>
+          </div>
+          <!--end of local-nav-links-->
+        </nav>
+        <!--end of local-nav-->
+
+        <nav class="global-nav">
+          <div>
+            <ul class="global-nav-links">
+              <a href="#" class="product-name"><img src="images/logo.png" /></a>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >PRODUCT</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >CLASS</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="global-nav-item"
+                  style="text-decoration: none"
+                  >MAP</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!--end of global-nav-links-->
+        </nav>
+        <!--end of global-nav-->
+      </header>
+
+      <section
+        id="productContainer"
+        class="product-container"
+        style="min-width: 950px"
+      >
+        <div class="product">
+          <div class="product-img">
+            <img
+              src="https://d1bg8rd1h4dvdb.cloudfront.net/upload/imgServer/product/goods/MG000021303/main/MG000021303_REP_THUMB_285X285_20220222101841.blob"
+            />
+          </div>
+          <div class="product-info">
+            <div class="product-desc-price">
+              <div class="product-desc">엠에코 프러스펜 3000 세트</div>
+              <div>
+                <span class="product-price">3500</span>
+                <span class="product-price-unit">원</span>
+              </div>
+            </div>
+            <div class="product-btn">
+              <button class="btn-whitegray">장바구니에 담기</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer 영역 -->
+      <footer>
+        <div class="foot">
+          <div class="foot_pop">
+            <div class="privacy">
+              <div class="title">개인정보 취급방침</div>
+              <div class="textarea">
+                <textarea readonly="readonly">
+                    '㈜모나미'는 (이하 '회사'는) 정보주체의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
+                  </textarea
+                >
+              </div>
+              <div class="btn_close">
+                <a>CLOSE</a>
+              </div>
+            </div>
+            <div class="email">
+              <div class="title">이메일무단수집거부</div>
+              <div class="textarea">
+                본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그
+                밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며,
+                이를 위반시정 보통신망법에 의해 형사 처벌됨을 유념하시기
+                바랍니다. <br />
+                <br />
+                <div class="tit">시행일</div>
+
+                본 이메일 무단 수집 거부 정책은 2017년 11월부터 시행합니다.
+              </div>
+              <div class="btn_close">
+                <a>CLOSE</a>
+              </div>
+            </div>
+          </div>
+          <div class="foot_top">
+            <h1>
+              <img src="images/logo_white.png" alt="푸터 모나미 로고" />
+            </h1>
+            <ul class="fm">
+              <li><a href="#">회사소개</a></li>
+              <li><a class="privacy_pop">개인정보처리방침</a></li>
+              <li><a class="email_pop">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script>
+    const initProduct = () => {
+
+    };
+
+    const initCartCount = () => {
+
+    };
+
+    const addCartItem = (idx, imgUrl, name, price) => {
+
+    };
+
+  </script>
+</html>
